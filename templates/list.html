@@ -1,0 +1,7 @@
+<!doctype html>
+<title>Recipe List</title>
+<body>
+  {% for recipe in recipes %}
+    <a href='/view/{{recipe._id}}'>{{ recipe.title }}</a><br />
+  {% endfor %}
+</body>

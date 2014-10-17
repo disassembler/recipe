@@ -1,0 +1,26 @@
+<!doctype html>
+<title>Recipe - {{ recipe.title }}</title>
+<body>
+  <div class='recipe_card'>
+    <div id='title'>{{ recipe.title }}</div>
+    <div id='owner'>{{ recipe.owner }}</div>
+    <p>Ingredients:</p>
+    <ul id='ingredients'>
+    {% for ingr in recipe.ingredients|sort %}
+    <li>{{ ingr.quantity }} {{ ingr.name }}</li>
+    {% endfor %}
+    </ul>
+    <p>Instructions:</p>
+    <ul id='instructions'>
+    {% for step, instr in recipe.instructions|dictsort %}
+    <li>{{ step }}) {{ instr }}</li>
+    {% endfor %}
+    </ul>
+    <div id='categories'>Categories: {{ recipe.categories|join(', ') }}</div>
+    <div id='servings'>Servings: {{ recipe.servings }}</div>
+    <div id='servingSize'>Serving Size: {{ recipe.servingSize }}</div>
+    <div id='difficulty'>Difficulty: {{ recipe.difficulty }}</div>
+    <div id='description'>Description: {{ recipe.description }}</div>
+
+</div>
+</body>
