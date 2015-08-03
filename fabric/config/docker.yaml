@@ -1,0 +1,9 @@
+roledefs:
+  app:
+    - app.docker.local
+  db:
+    - db.docker.local
+  proxy:
+    - proxy.docker.local
+
+environment: docker
