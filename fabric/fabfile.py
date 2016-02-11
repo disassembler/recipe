@@ -13,7 +13,7 @@ from fabric.contrib.files import *
 env.use_ssh_config = True
 
 env.roledefs = {
-    'app': [
+    'hello': [
         'app.docker.local'
      ]
 }
@@ -31,7 +31,7 @@ def loadenv(environment = ''):
         env.config = yaml.load(f)
         env.roledefs = env.config['roledefs']
 
-@roles('app', 'db', 'proxy')
+@roles('hello')
 def hello():
   run("echo hello world from `hostname`")
 

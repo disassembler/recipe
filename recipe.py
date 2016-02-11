@@ -3,6 +3,7 @@ from flask import render_template
 from flask.ext.pymongo import PyMongo
 
 app = Flask(__name__)
+app.config.from_object('config')
 mongo = PyMongo(app)
 
 @app.route('/view/<recipe_id>')

@@ -1,4 +1,8 @@
 roledefs:
+  hello:
+    - app.docker.local
+    - db.docker.local
+    - proxy.docker.local
   app:
     - app.docker.local
   db:
